@@ -3,24 +3,29 @@ $(document).ready(() => {
 // Setting up an array of objects that contains the questions for the quiz
 var questions = [
     {
-        question: "What trail do you need to take to get to Precipice Lake?\n(a) John Muir Trail\n(b) High Sierra Trail\n(c) Pacific Crest Trail",
-        answer: "b"
+        question: "What trail do you need to take to get to Precipice Lake?",
+        choices: ["John Muir Trail", "High Sierra Trail", "Pacific Crest Trail"],
+        answer: 2
     },
     {
-        question: "In what park can you find Longs Peak?\n(a) Rocky Mountain National Park\n(b) Badlands National Park\n(c) Glacier National Park",
-        answer: "a"
+        question: "In what park can you find Longs Peak?",
+        choices: ["Rocky Mountain National Park", "Badlands National Park", "Glacier National Park"],
+        answer: 1
     },
     {
-        question: "What river flows through the Grand Canyon?\n(a) Mississippi River\n(b) Youghiogheny River\n(c) Colorado River",
-        answer: "c"
+        question: "What river flows through the Grand Canyon?",
+        choices: ["Mississippi River", "Youghiogheny River", "Colorado River"],
+        answer: 3
     },
     {
-        question: "Which National Park gets the most visitors each year?\n(a) Grand Canyon National Park\n(b) Great Smoky Mountain National Park\n(c) Yosemite National Park",
-        answer: "b"
+        question: "Which National Park gets the most visitors each year?",
+        choices: ["Grand Canyon National Park", "Great Smoky Mountains National Park", "Yosemite National Park"],
+        answer: 2
     },
     {
-        question: "How many National Parks are in the United States?\n(a) 34\n(b) 59\n(c) 78",
-        answer: "b"
+        question: "How many National Parks are in the United States?",
+        choices: ["34", "59", "78"],
+        answer: 2
     }
 ];
 
@@ -67,12 +72,6 @@ var showGame = function() {
         timer();
     })
 };
-
-// Creating a function that will load the questions
-var loadQuestions = function() {
-
-};
-
 
 // Creating a function to display the questions and loop through the questions array
 var startQuiz = function() {
