@@ -35,7 +35,7 @@ var totalTime = 20;
 
 // Creating a function to run the game timer
 var timer = function() {
-    showTimer = setInterval(decrement, 1000 * 20);
+    showTimer = setInterval(decrement, 1000);
 };
 
 var decrement = function() {
