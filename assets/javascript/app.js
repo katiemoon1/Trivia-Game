@@ -40,10 +40,11 @@ var timer = function() {
 
 var decrement = function() {
     totalTime--;
-    $("#timer").text(totalTime);
+    $("#timer").text("Time left: " + totalTime + " seconds");
     if (totalTime === 0) {
         stop();
         alert("Your time is up!");
+        $("#final-score").text("Your score is: " + playerScore / questionTotal);
     }
 };
 
