@@ -3,7 +3,7 @@ $(document).ready(() => {
 // Setting up an array of objects that contains the questions for the quiz
 var questions = [
     {
-        question: "What trail do you need to take to get to Precipice Lake?",
+        question: "What trail do you need to hike to get to Precipice Lake?",
         choices: ["John Muir Trail", "High Sierra Trail", "Pacific Crest Trail"],
         answer: 2
     },
@@ -32,9 +32,7 @@ var questions = [
 // Setting up the variables for the game
 var playerScore = 0;
 var playerGuess;
-var correctAnswers = [];
 var questionTotal = 5;
-var showQuestions;
 var showTimer;
 var totalTime = 20;
 
@@ -70,12 +68,23 @@ var showGame = function() {
         $(".question").show();
         $("#timer").show();
         timer();
+        startQuiz();
     })
 };
 
 // Creating a function to display the questions and loop through the questions array
 var startQuiz = function() {
+    $("#game-question1").text(questions[0].question);
+    $("#game-question2").text(questions[1].question);
+    $("#game-question3").text(questions[2].question);
+    $("#game-question4").text(questions[3].question);
+    $("#game-question5").text(questions[4].question);
     for (var i = 0; i < questions.length; i++) {
+        $("input[value='a']").text(questions[0].choices);
+        $("input[name='two']").text(questions[1].choices);
+        $("input[name='three']").text(questions[2].choices);
+        $("input[name='four']").text(questions[3].choices);
+        $("input[name='five']").text(questions[4].choices);
         if (playerGuess === questions[i].answer) {
             playerScore++
         } else {

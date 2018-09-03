@@ -6,3 +6,15 @@ body {
     height: 100%;
     font-family: 'Mukta', sans-serif;
 }
+
+#timer {
+    font-size: 28px;
+}
+
+.question {
+    font-size: 28px;
+}
+
+#final-score {
+    font-size: 28px;
+}
