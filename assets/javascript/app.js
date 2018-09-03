@@ -64,6 +64,7 @@ var showGame = function() {
         $(".btn").hide();
         $(".question").show();
         $("#timer").show();
+        timer();
     })
 };
 
@@ -87,6 +88,5 @@ var startQuiz = function() {
 // Calling functions
 hideGame();
 showGame();
-timer();
 
 });
