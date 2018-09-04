@@ -56,9 +56,7 @@ var stop = function() {
 
 // Display the score
 var showScore = function() {
-    if (totalTime === 0) {
     $("#final-score").text("Your score is: " + playerScore);
-    }
 }
 
 // Creating a function to hide the questions and timer when the page loads
@@ -85,7 +83,7 @@ var startQuiz = function() {
         $("#game-question").text(questions[questionTotal].question);
         $("#choices").empty();
         for (var i = 0; i < questions[questionTotal].choices.length; i++) {
-           $("#choices").append("<input type='radio' name='choice' class='choice-button' number='" + i + "'>" + questions[questionTotal].choices[i] + "</input>");     
+           $("#choices").append("<input type='radio' name='choice' class='choice-button' number='" + i + "'>" + questions[questionTotal].choices[i] + "</input>");  
         }
     } else {
 
