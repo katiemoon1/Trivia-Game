@@ -54,6 +54,12 @@ var stop = function() {
     clearInterval(showTimer);
 };
 
+// Add to the player's score
+var win = function() {
+    playerScore++;
+}
+
+
 // Display the score
 var showScore = function() {
     $("#final-score").text("Your score is: " + playerScore);
@@ -93,7 +99,7 @@ var startQuiz = function() {
 // Click handler to check if the answer selected is correct
 $(document).on("click", ".choice-button", function() {
     if ($(this).attr("number") === questions[questionTotal].answer) {
-        playerScore++;
+        win();
     }
     questionTotal++;
     startQuiz();
