@@ -42,11 +42,11 @@ var timer = function() {
 
 var decrement = function() {
     totalTime--;
-    $("#timer").text("Time left: " + totalTime + " seconds");
+    $("#timer").text(totalTime);
     if (totalTime === 0) {
         stop();
-        alert("Your time is up!");
         showScore();
+        hideGame();
     }
 };
 
@@ -62,15 +62,16 @@ var showScore = function() {
 // Creating a function to hide the questions and timer when the page loads
 var hideGame = function() {
     $(".question").hide();
-    $("#timer").hide();
+    $("#timer-div").hide();
 };
 
 // Creating a function that will show the questions and timer when the "let's go!" button is clicked
 var showGame = function() {
     $(".btn").on("click", function() {
         $(".btn").hide();
+        $("#get-ready").hide();
         $(".question").show();
-        $("#timer").show();
+        $("#timer-div").show();
         timer();
         startQuiz();
     })
@@ -83,10 +84,12 @@ var startQuiz = function() {
         $("#game-question").text(questions[questionTotal].question);
         $("#choices").empty();
         for (var i = 0; i < questions[questionTotal].choices.length; i++) {
-           $("#choices").append("<input type='radio' name='choice' class='choice-button' number='" + i + "'>" + questions[questionTotal].choices[i] + "</input>");  
+           $("#choices").append("<input type='radio' name='choice' class='choice-button' number='" + i + "'>" + questions[questionTotal].choices[i] + "</input>" + "<br>");  
         }
     } else {
-        
+        stop();
+        hideGame();
+        showScore();
     }
 };
 
