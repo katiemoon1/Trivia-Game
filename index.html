@@ -13,23 +13,67 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+            <!-- Jumbotron holding the initial page -->
             <div class="jumbotron">
                 <h1 class="display-4">National Park Trivia! </h1>
                 <p class="lead">This is a test to see how well you know your National Parks.</p>
                 <hr class="my-4">
-                <p id="get-ready">Are you ready to test your knowledge? Click the button below to get started!</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Let's go!</a>
+                <div class="start">
+                    <p id="get-ready">Are you ready to test your knowledge? Click the button below to get started!</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button">let's go!</a>
+                </div>
+                <div id="user-info">
+                    <a class="btn btn-primary btn-lg" href="#" role="button">sign up</a>
+
+                    <a class="btn btn-primary btn-lg" href="#" role="button">login</a>
+                </div>
               </div>
+              <!-- The div holding the timer -->
             <div id="timer-div">
                 <p>You have <span id="timer">20</span> seconds left!</p>
             </div>
+            <!-- Form holding the questions that are generated -->
             <form>
             <div class="container question">
                 <p id="game-question"></p>
                 <p id="choices"></p>
             </div>
             </form>
+            <!-- Final score div -->
             <div id="final-score"></div>
+            <!-- User sign up -->
+            <div class="card" id="sign-up">
+                <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="password" class="form-control" id="firstName" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="password" class="form-control" id="lastName" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="password" class="form-control" id="username" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email address</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <button type="submit" id="new-user" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+            </div>
+            <!-- User login -->
+            <div id="login">
+
+            </div>
         </div>
     </div>
 </div>

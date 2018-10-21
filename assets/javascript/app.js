@@ -1,4 +1,9 @@
+var connection = require("./database.js")
+
+
 $(document).ready(() => {
+
+$(document).on("click", "#new-user")
 
 // Setting up an array of objects that contains the questions for the quiz
 var questions = [
