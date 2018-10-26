@@ -1,9 +1,13 @@
-var connection = require("./database.js")
+// import connection from './database.js'
+// var connection = require("../database.js")
+
 
 
 $(document).ready(() => {
 
-$(document).on("click", "#new-user")
+$(document).on("click", "#new-button", function() {
+
+})
 
 // Setting up an array of objects that contains the questions for the quiz
 var questions = [
@@ -66,9 +70,12 @@ var showScore = function() {
 
 // Creating a function to hide the questions and timer when the page loads
 var hideGame = function() {
-    $(".question").hide();
-    $("#timer-div").hide();
-};
+    $(".question").hide()
+    $("#timer-div").hide()
+    $(".start").hide()
+    $("#sign-up").hide()
+    $("#user-login").hide()
+}
 
 // Creating a function that will show the questions and timer when the "let's go!" button is clicked
 var showGame = function() {

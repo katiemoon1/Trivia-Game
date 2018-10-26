@@ -1,0 +1,23 @@
+{
+  "name": "trivia-game",
+  "version": "1.0.0",
+  "description": "A trivia game using JavaScript and jQuery.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katiemoon1/Trivia-Game.git"
+  },
+  "author": "Katie Moon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/katiemoon1/Trivia-Game/issues"
+  },
+  "homepage": "https://github.com/katiemoon1/Trivia-Game#readme",
+  "dependencies": {
+    "bluebird": "^3.5.2",
+    "mysql": "^2.16.0"
+  }
+}
